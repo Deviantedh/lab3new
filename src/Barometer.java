@@ -1,7 +1,7 @@
 import Actors.Device;
 
 public class Barometer extends Device {
-    public Barometer(String name) {
-        super(name);
+    public Barometer(String name, int id) {
+        super(name, id);
     }
 }

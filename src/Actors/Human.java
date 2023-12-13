@@ -1,14 +1,13 @@
 package Actors;
-
 import Moves.*;
 
-public class Human implements Hear, Attack, Break, Feel, Look, Move, Talk, Think, Interact {
+public class Human implements Human_moves {
     protected int id;
     protected int co;
-    private String name;
+    protected String name;
 
-    public Human(String name) {
-        this.id = co;
+    public Human(String name, int id) {
+        this.id = id;
         co += 1;
         this.name = name;
 
@@ -17,16 +16,7 @@ public class Human implements Hear, Attack, Break, Feel, Look, Move, Talk, Think
         return name;
     }
     @Override
-    public void heard(String a) {
-        System.out.println(this.name + " услышал" + a);
-    }
-    @Override
-    public void shoot(String a){ System.out.println(this.name + " стреляли" + a);}
-
-    @Override
-    public void broke(String a) {
-        System.out.println(this.name + " " + a);
-    }
+    public void heard(String a){  System.out.println(this.name + " услышал" + a);}
 
     @Override
     public void feel(String a) {
@@ -36,26 +26,6 @@ public class Human implements Hear, Attack, Break, Feel, Look, Move, Talk, Think
     @Override
     public void lookat(String a) {
         System.out.println(this.name + " посмотрел" + a);
-    }
-
-    @Override
-    public void run(String a) {
-        System.out.println(this.name + " побежали" + a);
-    }
-
-    @Override
-    public void fly(String a) {
-        System.out.println(this.name + " " + a);
-    }
-
-    @Override
-    public void climb(String a) {
-        System.out.println(this.name + " полезли" + a);
-    }
-
-    @Override
-    public void say(String a) {
-        System.out.println(this.name + " сказал" + a);
     }
 
     @Override

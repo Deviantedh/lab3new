@@ -9,8 +9,8 @@ public abstract class Device {
     protected int id;
     protected int co;
 
-    public Device(String name) {
-        this.id = co;
+    public Device(String name, int id) {
+        this.id = id;
         co += 1;
         this.name = name;
     }

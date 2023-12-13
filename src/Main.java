@@ -1,18 +1,24 @@
 import Actors.Human;
+import Actors.Policeman;
 import Conditions.Conditionhp;
 import Conditions.Conditionpower;
 
 public class Main {
     public static void main(String[] args) {
         //creating out objects
-        Human znaika = new Human("Знайка");
-        Human rigl = new Human("Ригль");
-        Barometer barometer = new Barometer("Барометр");
-        Anemometer anemometer = new Anemometer("Анемометр");
-        RainGauge rainGauge = new RainGauge("Дождемер");
-        AntiGravityDevice antiGravityDevice = new AntiGravityDevice("Прибор невесомости");
-        Human policemans = new Human("Полицейские");
-        Seismograth seismograth = new Seismograth("Сейсмограф");
+        Human znaika = new Human("Знайка", 1);
+        Human rigl = new Human("Ригль", 2);
+        Barometer barometer = new Barometer("Барометр", 1);
+        Anemometer anemometer = new Anemometer("Анемометр", 2);
+        RainGauge rainGauge = new RainGauge("Дождемер", 3);
+        AntiGravityDevice antiGravityDevice = new AntiGravityDevice("Прибор невесомости", 0);
+        Policeman policemans = new Policeman("Полицейские", 0);
+        Seismograth seismograth = new Seismograth("Сейсмограф", 4);
+        //test
+        //System.out.println(znaika.hashCode());
+        //System.out.println(rigl.hashCode());
+        //System.out.println(policemans.hashCode());
+
         //telling our plot
         policemans.shoot(" по ракете.");
         znaika.heard(", что пули барабанят по обшивке ракеты.");
@@ -45,5 +51,6 @@ public class Main {
         policemans.fly("взвивались кверху.");
         policemans.fly("падали вниз.");
         policemans.fly("отскакивали от земли, словно резиновые мячи, кверху.");
+
     }
 }
