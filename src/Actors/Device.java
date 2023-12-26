@@ -1,28 +1,54 @@
 package Actors;
-import Conditions.Conditionhp;
-import Conditions.Conditionpower;
+
+import Types.Device_type;
 
 public abstract class Device {
+    protected abstract void dowork();
     public String name;
-    public Conditionpower condition = Conditionpower.off;
-    public Conditionhp hp = Conditionhp.intact;
+    public boolean hp = true;
+    public boolean condition = false;
     protected int id;
+    protected Device_type Type = Device_type.Null;
     protected int co;
 
-    public Device(String name, int id) {
-        this.id = id;
+    public Device(String name, int did, Device_type Type) {
+        this.Type = Type;
+        this.id = did;
         co += 1;
         this.name = name;
     }
-
+    public void setType(Device_type Newtype){
+        this.Type = Newtype;
+    }
+    public Device_type getType(){
+        return this.Type;
+    }
+    public void change_cond(boolean cond) {
+        this.condition = cond;
+    }
+    public void change_hp(boolean hp){
+        this.hp = hp;
+    }
     public String getName() {
         return name;
     }
     public void tellstate(){
-        System.out.println(this.name + " " + condition.getAbbreviation());
+        if(condition == true){
+            System.out.println("Прибор '" + this.name + "' включен.");
+
+        }
+        else {
+            System.out.println("Прибор '" + this.name + "' выключен.");
+        }
     }
     public void tellstatus(){
-        System.out.println(this.name + " " + hp.getAbbreviation());
+        if(hp == true){
+        System.out.println("Целостность прибора '" + this.name + "' равна 100~%");
+
+        }
+        else {
+            System.out.println("Целостность прибора '" + this.name + "' нарушена, прибор сломан.");
+        }
     }
     @Override
     public int hashCode() {

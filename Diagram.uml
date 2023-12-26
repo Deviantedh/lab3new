@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Moves.Policeman_moves</OriginalElement>
+  <nodes>
+    <node x="-95.0" y="64.0">Building</node>
+    <node x="-95.0" y="137.0">Actors.Human</node>
+    <node x="347.0" y="64.0">Barometer</node>
+    <node x="78.5" y="215.0">Actors.Policeman</node>
+    <node x="34.0" y="64.0">RainGauge</node>
+    <node x="232.0" y="137.0">Moves.Policeman_attacks</node>
+    <node x="660.0" y="64.0">AntiGravityDevice</node>
+    <node x="28.0" y="137.0">Moves.Policeman_moves</node>
+    <node x="282.75" y="-14.0">Actors.Device</node>
+    <node x="466.0" y="137.0">Conditions.Device_type</node>
+    <node x="653.0" y="137.0">Main</node>
+    <node x="184.0" y="64.0">Seismograth</node>
+    <node x="495.0" y="64.0">Anemometer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="RainGauge" target="Actors.Device" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="99.0" y="39.0" />
+      <point x="333.25" y="39.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="Anemometer" target="Actors.Device" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="567.5" y="39.0" />
+      <point x="333.25" y="39.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="Actors.Policeman" target="Moves.Policeman_moves" relationship="REALIZATION">
+      <point x="31.5" y="-14.0" />
+      <point x="173.0" y="195.0" />
+      <point x="223.25" y="195.0" />
+      <point x="223.25" y="185.0" />
+      <point x="120.0" y="185.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="Building" target="Actors.Device" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="-40.5" y="39.0" />
+      <point x="333.25" y="39.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="Actors.Policeman" target="Moves.Policeman_attacks" relationship="REALIZATION">
+      <point x="31.5" y="-14.0" />
+      <point x="173.0" y="195.0" />
+      <point x="223.25" y="195.0" />
+      <point x="223.25" y="185.0" />
+      <point x="326.5" y="185.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="AntiGravityDevice" target="Actors.Device" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="751.0" y="39.0" />
+      <point x="333.25" y="39.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="Seismograth" target="Actors.Device" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="255.5" y="39.0" />
+      <point x="333.25" y="39.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="Actors.Policeman" target="Actors.Human" relationship="GENERALIZATION">
+      <point x="-31.5" y="-14.0" />
+      <point x="110.0" y="195.0" />
+      <point x="-43.5" y="195.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="Barometer" target="Actors.Device" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="411.0" y="39.0" />
+      <point x="333.25" y="39.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="373.5" y="114.5" />
+  <SelectedNodes>
+    <node>Moves.Policeman_moves</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
